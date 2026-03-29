@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body{
+    background-color: #F6F7F8;
+    font-family: Poppins, sans-serif;
+}
+
+header{
+    background-image: url(/assets/bg.png);
+}
+
+button{
+    cursor: pointer;
+}
+
+img{
+    min-width: 112px;
+    min-height: 112px;
+}
