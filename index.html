@@ -1,278 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <link rel="icon" href="/assets/doce-encanto-dark-icon.png" type="image/png">
-    <link href="./styles/output.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="icon"
+      href="/assets/doce-encanto-dark-icon.png"
+      type="image/png"
+    />
+    <link href="./styles/output.css" rel="stylesheet" />
 
     <title>Doce Encanto</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header class="w-full h-[420px] bg-zinc-900 bg-cover bg-center">
-        <div class="w-full h-full flex flex-col justify-center items-center">
-            <img 
-                src="./assets/doce-encanto-light.jpg" 
-                alt="Logo DevBurguer"
-                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
-            >
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Doce Encanto</h1>
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/doce-encanto-light.jpg"
+          alt="Logo DevBurguer"
+          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+        <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Doce Encanto</h1>
 
-            <span class="text-white font-medium">Carnaubal-CE e Tianguá-CE</span>
+        <span class="text-white font-medium">Carnaubal-CE e Tianguá-CE</span>
 
-            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-                <span class="text-white font-medium">Seg. a Dom. – 08h às 23h</span>
-            </div>
-
+        <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+          <span class="text-white font-medium">Seg. a Dom. – 08h às 23h</span>
         </div>
+      </div>
     </header>
 
-    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça nosso menu</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+      Menu de Páscoa
+    </h2>
 
     <div id="menu">
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-2xl">Ovos de Colher</h2>
+      </div>
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
+      >
+        <div class="flex gap-2">
+          <img
+            src="./assets/brigadeiro(1).jpeg"
+            alt="Ovo de Brigadeiro"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Brigadeiro 100g</p>
+            <p class="text-sm">
+              Casca de chocolate recheada com brigadeiro cremoso de chocolate,
+              finalizado com granulado.
+            </p>
 
-            <div class="flex gap-2">
-                <img 
-                    src="./assets/brigadeiro(1).jpeg" 
-                    alt="Ovo de Brigadeiro"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-                >
-                <div>
-                    <p class="font-bold">Brigadeiro 100g</p>
-                    <p class="text-sm">Casca de chocolate recheada com brigadeiro cremoso de chocolate, finalizado com granulado.</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 22,99</p>
-                        <button 
-                            class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                            data-name="Brigadeiro 100g"
-                            data-price="22.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 22,99</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                data-name="Brigadeiro 100g"
+                data-price="22.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
             </div>
-
-            <div class="flex gap-2">
-                <img 
-                    src="./assets/ferrero.jpeg" 
-                    alt="Ovo de Ferrero"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-                >
-                <div>
-                    <p class="font-bold">Ferrero 100g</p>
-                    <p class="text-sm">Casca de chocolate recheada com brigadeiro de chocolate com amendoim,  Nutella e finalizado com pedaços de Ferrero.</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 31,90</p>
-                        <button 
-                            class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                            data-name="Ferrero 100g"
-                            data-price="31.90"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex gap-2">
-                <img 
-                    src="./assets/limão(5).jpeg" 
-                    alt="Ovo de Limão"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-                >
-                <div>
-                    <p class="font-bold">Limão 100g</p>
-                    <p class="text-sm">Casca de chocolate branco recheada com brigadeiro cremoso de limão, coberto com merengue maçaricado.</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 21,99</p>
-                        <button 
-                            class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                            data-name="Limao 100g"
-                            data-price="21.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex gap-2">
-                <img 
-                    src="./assets/morango.jpg" 
-                    alt="Ovo de Ninho com Morango"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-                >
-                <div>
-                    <p class="font-bold">Ninho c/ Morango 100g</p>
-                    <p class="text-sm">Casca de chocolate recheada com brigadeiro de leite Ninho, com pedaços de morango.</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 24,99</p>
-                        <button 
-                            class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                            data-name="Morango 100g"
-                            data-price="24.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-             <div class="flex gap-2">
-                <img 
-                    src="./assets/uva.jpg" 
-                    alt="Ovo Surpresa de Uva"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-                >
-                <div>
-                    <p class="font-bold">Surpresa de Uva 100g</p>
-                    <p class="text-sm">Casca de chocolate recheada com brigadeiro de leite Ninho, com uvas frescas.</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 19,99</p>
-                        <button 
-                            class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                            data-name="Uva 100g"
-                            data-price="19.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex gap-2">
-                <img 
-                    src="./assets/maracujá(2).png" 
-                    alt="Ovo de Maracujá"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-                >
-                <div>
-                    <p class="font-bold">Maracujá 100g</p>
-                    <p class="text-sm">Casca de chocolate recheada com brigadeiro cremoso de maracujá.</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 19,99</p>
-                        <button 
-                            class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                            data-name="Maracuja 100g"
-                            data-price="19.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-        </main>
-
-        <div class="mx-auto max-w-7xl px-2 my-2">
-            <h2 class="font-bold text-3xl">Bebidas</h2>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
-            <div class="flex gap-2 w-full">
-                <img 
-                    src="./assets/refri-1.png" 
-                    alt="Coca lata"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-                >
-                <div class="w-full">
-                    <p class="font-bold">Coca lata</p>
+        <div class="flex gap-2">
+          <img
+            src="./assets/ferrero.jpeg"
+            alt="Ovo de Ferrero"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Ferrero 100g</p>
+            <p class="text-sm">
+              Casca de chocolate recheada com brigadeiro de chocolate com
+              amendoim, Nutella e finalizado com pedaços de Ferrero.
+            </p>
 
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 5,99</p>
-                        <button 
-                            class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                            data-name="Coca lata"
-                            data-price="5.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 31,90</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                data-name="Ferrero 100g"
+                data-price="31.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
             </div>
-
-            <div class="flex gap-2 w-full">
-                <img 
-                    src="./assets/refri-2.png" 
-                    alt="Coca lata"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-                >
-                <div class="w-full">
-                    <p class="font-bold">Guaraná lata</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 5,99</p>
-                        <button 
-                            class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
-                            data-name="Guarana lata"
-                            data-price="5.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
 
+        <div class="flex gap-2">
+          <img
+            src="./assets/limão(5).jpeg"
+            alt="Ovo de Limão"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Limão 100g</p>
+            <p class="text-sm">
+              Casca de chocolate branco recheada com brigadeiro cremoso de
+              limão, coberto com merengue maçaricado.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 21,99</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                data-name="Limao 100g"
+                data-price="21.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/morango.jpg"
+            alt="Ovo de Ninho com Morango"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Ninho c/ Morango 100g</p>
+            <p class="text-sm">
+              Casca de chocolate recheada com brigadeiro de leite Ninho, com
+              pedaços de morango.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 24,99</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                data-name="Morango 100g"
+                data-price="24.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/uva.jpg"
+            alt="Ovo Surpresa de Uva"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Surpresa de Uva 100g</p>
+            <p class="text-sm">
+              Casca de chocolate recheada com brigadeiro de leite Ninho, com
+              uvas frescas.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 19,99</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                data-name="Uva 100g"
+                data-price="19.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img
+            src="./assets/maracujá(2).png"
+            alt="Ovo de Maracujá"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold">Maracujá 100g</p>
+            <p class="text-sm">
+              Casca de chocolate recheada com brigadeiro cremoso de maracujá.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 19,99</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                data-name="Maracuja 100g"
+                data-price="19.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">Kit 3 Mini Ovos - 50g</h2>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
+        id="menu"
+      >
+        <div class="flex gap-2 w-full">
+          <img
+            src="./assets/refri-1.png"
+            alt="Coca lata"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-full">
+            <p class="font-bold">Coca lata</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 5,99</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded add-to-cart-btn"
+                data-name="Coca lata"
+                data-price="5.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div 
-        class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
-        id="cart-modal"
+    <div
+      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+      id="cart-modal"
     >
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
-            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
-            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
 
-            <p class="font-bold mt-4">Endereço de entrega:</p>
-            <input 
-                type="text"
-                placeholder="Digite sua Cidade, Rua, Bairro e Número"
-                id="address"
-                class="w-full border-2 p-1 rounded my-1"
-            >
-            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço</p>
+        <p class="font-bold mt-4">Endereço de entrega:</p>
+        <input
+          type="text"
+          placeholder="Digite sua Cidade, Rua, Bairro e Número"
+          id="address"
+          class="w-full border-2 p-1 rounded my-1"
+        />
+        <p class="text-red-500 hidden" id="address-warn">Digite seu endereço</p>
 
-            <div class="flex items-center justify-between mt-5 w-full">
-                <button id="close-modal-btn">Fechar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
-            </div>
+        <div class="flex items-center justify-between mt-5 w-full">
+          <button id="close-modal-btn">Fechar</button>
+          <button
+            id="checkout-btn"
+            class="bg-green-500 text-white px-4 py-1 rounded"
+          >
+            Finalizar pedido
+          </button>
         </div>
+      </div>
     </div>
 
-    
-    <button 
-        class="w-full bg-[#7c5f7e] py-3 fixed bottom-0 z-40 flex items-center justify-center gap-2 text-white font-bold"
-        id="cart-btn"
+    <button
+      class="w-full bg-[#7c5f7e] py-3 fixed bottom-0 z-40 flex items-center justify-center gap-2 text-white font-bold"
+      id="cart-btn"
     >
-        (<span id="cart-count">0</span>)
-        Veja meu carrinho
-        <i class="fa fa-cart-plus text-lg text-white"></i>
+      (<span id="cart-count">0</span>) Veja meu carrinho
+      <i class="fa fa-cart-plus text-lg text-white"></i>
     </button>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

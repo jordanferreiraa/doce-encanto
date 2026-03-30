@@ -1,19 +1,147 @@
 @import "tailwindcss";
 
-body{
-    background-color: #F6F7F8;
-    font-family: Poppins, sans-serif;
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f5f0f7;
 }
 
-header{
-    background-image: url(/assets/bg.png);
+header {
+  background-image: url(/assets/bg.png);
 }
 
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-img{
-    min-width: 112px;
-    min-height: 112px;
+img {
+  min-width: 112px;
+  min-height: 112px;
+}
+
+h1,
+h2,
+.display-font {
+  font-family: "Playfair Display", serif;
+}
+
+/* Accordion */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.accordion-content.open {
+  max-height: 9999px;
+}
+
+.accordion-icon {
+  transition: transform 0.4s ease;
+}
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Card de sabor */
+.flavor-card {
+  background: white;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(120, 60, 120, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.flavor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(120, 60, 120, 0.18);
+}
+
+/* Imagem circular com fundo roxa */
+.flavor-img-wrap {
+  background: linear-gradient(135deg, #7e5a8a 0%, #a07aad 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+.flavor-img-wrap img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.flavor-card:hover .flavor-img-wrap img {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+/* Info do sabor */
+.flavor-info {
+  padding: 1rem 1.25rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botões de tamanho */
+.size-btn {
+  background: #ede4f0;
+  color: #5c3d6e;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.15s;
+  white-space: nowrap;
+}
+.size-btn:hover {
+  background: #7e5a8a;
+  color: white;
+  transform: scale(1.05);
+}
+.size-btn.selected {
+  background: #5c3d6e;
+  color: white;
+}
+
+/* Botão adicionar ao carrinho */
+.add-btn {
+  background: #2d1a3a;
+  color: white;
+  border-radius: 0.6rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.add-btn:hover {
+  background: #7e5a8a;
+  transform: scale(1.04);
+}
+
+/* Header accordion */
+.accordion-header {
+  background: linear-gradient(135deg, #5c3d6e 0%, #8a6098 100%);
+  border-radius: 1rem;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s;
+}
+.accordion-header:hover {
+  opacity: 0.93;
 }
