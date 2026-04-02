@@ -26,33 +26,84 @@ closeModalBtn.addEventListener("click", function() {
     cartModal.style.display = "none"
 })
 
-menu.addEventListener("click", function(event) {
+// menu.addEventListener("click", function(event) {
 
-    let parentButton = event.target.closest(".add-to-cart-btn")
+//     let parentButton = event.target.closest(".add-to-cart-btn")
 
-    if(parentButton) {
-        const name = parentButton.getAttribute("data-name")
-        const price = parseFloat(parentButton.getAttribute("data-price"))
+//     if(parentButton) {
+//         const name = parentButton.getAttribute("data-name")
+//         const price = parseFloat(parentButton.getAttribute("data-price"))
 
-        addToCart(name, price)
-    }
+//         addToCart(name, price)
+//     }
 
-})
+// })
 
-function addToCart(name, price) {
-    const existingItem = cart.find(item => item.name === name)
+// function addToCart(name, price) {
+//     const existingItem = cart.find(item => item.name === name)
 
-    if(existingItem) {
+//     if(existingItem) {
+//         existingItem.quantity += 1;
+//     }else {
+//         cart.push({
+//             name,
+//             price,
+//             quantity: 1,
+//         })
+//     }
+
+//     updateCartModal()
+// }
+
+function addToCart(button) {
+
+    const card = button.closest(".flavor-card");
+
+    const name = card.querySelector(".display-font").textContent;
+
+    const sizeContainer = card.querySelector("[data-flavor]");
+    const prices = JSON.parse(sizeContainer.getAttribute("data-prices"));
+
+    const selectedBtn = sizeContainer.querySelector(".size-btn.selected");
+    const sizeText = selectedBtn.textContent.split("·")[0].trim();
+
+    const price = parseFloat(prices[sizeText]);
+
+    const itemName = `${name} (${sizeText})`;
+
+    const existingItem = cart.find(item => item.name === itemName);
+
+    if (existingItem) {
         existingItem.quantity += 1;
-    }else {
+    } else {
         cart.push({
-            name,
+            name: itemName,
             price,
             quantity: 1,
-        })
+        });
     }
 
-    updateCartModal()
+    updateCartModal();
+}
+
+function selectSize(button) {
+    const container = button.parentElement;
+
+    container.querySelectorAll(".size-btn").forEach(btn => {
+        btn.classList.remove("selected");
+    });
+
+    button.classList.add("selected");
+
+    // Atualiza o preço exibido
+    const prices = JSON.parse(container.getAttribute("data-prices"));
+    const sizeText = button.textContent.split("·")[0].trim();
+    const newPrice = prices[sizeText];
+
+    const card = container.closest(".flavor-card");
+    const priceDisplay = card.querySelector(".price-display");
+
+    priceDisplay.textContent = `R$ ${parseFloat(newPrice).toFixed(2).replace(".", ",")}`;
 }
 
 function updateCartModal() {
